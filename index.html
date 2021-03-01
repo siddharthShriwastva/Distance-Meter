@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Distance Meter</title>
+	<style type="text/css">
+		body{
+			background: #f4f4f4;
+			font-family: arial;
+			font-size: 10px;
+		}
+		button{
+			font-size: 20px;
+			padding: 3px 13px;
+		}
+		button#stopBtn{
+			display:None;
+		}
+		#container{
+			width:100%;
+			margin:0 auto;
+			text-align: center;
+		}
+		header{
+			background: #333;
+			padding: 5px;
+		}
+		header h1{
+			color: #fff;
+			font-size: 30px;
+			margin:0;
+			padding: 0;
+		}
+		footer{
+			background: #333;
+			color: #fff;
+			padding: 8px;
+			font-size:16px;
+		}
+	</style>
+</head>
+<body>
+<div id="container">
+	<header>
+		<h1>Distance meter</h1>
+	</header>
+	<p>
+		<strong>Starting position</strong>
+		<br>
+		<p id="demo"></p>
+		<span id="startlat">Acquiring Latitude.....</span>
+		<span id="startlon">Acquiring Longitude.....</span>
+	</p>
+	<p>
+		<strong>Current position</strong>
+		<br>
+		<span id="currentlat">Acquiring Latitude.....</span>
+		<span id="currentlon">Acquiring Longitude.....</span>
+	</p>
+	<p>
+		<strong>Distance Gone</strong>
+		<br>
+		<span id="distance">0</span> Kilometers
+	</p>
+	<p>
+		<button id="startBtn" onclick="startTracking()">Start Tracking</button>
+		<button id="stopBtn" onclick="stopTracking()">Stop Tracking</button>
+	</p>
+	<footer>
+		<span>Copyright &copy; 2014, Distance Meter</span>
+	</footer>
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
